@@ -314,17 +314,17 @@ return [
     
       
 
-        ['header' => 'periodo'],
+        ['header' => 'Opciones'],
         [
-            'text'       => 'periodo',
-            'icon_color' => 'blue',
-            'icon'  => 'fas fa-fw fa-home',
-            'route'        => 'periods.create',
+            'text'       => 'Instructor',
+            'icon_color' => 'red',
+            'icon'  => 'fas fa-chalkboard-teacher',
+            'route'        => 'instructors.create',
         ],
         [
             'text' => 'CRUD',
-            'route'  => 'periods.index',
-            'icon'  => 'fas fa-fw fa-home',
+            'route'  => 'instructors.index',
+            'icon'  => 'fas fa-database',
         ],
         
         

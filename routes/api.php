@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Resources\instructorColletion;
+use App\Models\Instructor;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -16,4 +18,14 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
+
+});
+
+
+
+Route::group(["prefix"=> "i", 'namespace' => 'App\Http\Controllers'],  function () {
+    Route::apiResource("instructors",InstructorController::class);
+    $instructor=Instructor::paginate();
+   
+
 });
